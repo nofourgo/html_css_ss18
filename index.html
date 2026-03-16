@@ -139,7 +139,26 @@
                 <th>Thao Tác</th>
               </tr>
             </thead>
-            <tbody id="productTableBody"></tbody>
+            <tbody id="productTableBody">
+              <tr>
+                <td>1</td>
+                <td><strong>Bánh Khả</strong></td>
+                <td>Thực phẩm</td>
+                <td class="price">200.000&nbsp;₫</td>
+                <td class="quantity">19</td>
+                <td class="description">Bánh này là bánh khảo</td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-edit" onclick="editProduct(1)">
+                      ✏️ Sửa
+                    </button>
+                    <button class="btn-delete" onclick="deleteProduct(1)">
+                      🗑️ Xóa
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
           <div class="empty-state show" id="emptyState">
             <div class="empty-state-icon">📦</div>
