@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -27,14 +28,14 @@
                 id="productName"
                 placeholder="Nhập tên sản phẩm..."
                 autocomplete="off"
-                required=""
+                required
               />
             </div>
             <div class="form-group">
               <label for="productCategory"
                 >Danh Mục <span class="required">*</span></label
               >
-              <select id="productCategory" required="">
+              <select id="productCategory" required>
                 <option value="">-- Chọn danh mục --</option>
                 <option value="Điện tử">Điện tử</option>
                 <option value="Thời trang">Thời trang</option>
@@ -57,7 +58,7 @@
                 placeholder="0"
                 min="0"
                 step="1000"
-                required=""
+                required
               />
             </div>
             <div class="form-group">
@@ -69,7 +70,7 @@
                 id="productQuantity"
                 placeholder="0"
                 min="0"
-                required=""
+                required
               />
             </div>
           </div>
@@ -126,8 +127,29 @@
       <!-- Product List Section -->
       <section class="list-section">
         <h2>Danh Sách Sản Phẩm</h2>
-        <div class="table-container" id="table-container">
-          
+        <div class="table-container">
+          <table id="productTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Danh Mục</th>
+                <th>Giá</th>
+                <th>Số Lượng</th>
+                <th>Mô Tả</th>
+                <th>Thao Tác</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody">
+              <!-- Product rows will be dynamically added here -->
+            </tbody>
+          </table>
+          <div class="empty-state" id="emptyState">
+            <div class="empty-state-icon">📦</div>
+            <div class="empty-state-text">
+              Chưa có sản phẩm nào. Hãy thêm sản phẩm mới!
+            </div>
+          </div>
         </div>
       </section>
 
@@ -138,7 +160,7 @@
             Tổng sản phẩm: <strong id="totalProducts">0</strong>
           </span>
           <span class="stat-item">
-            Tổng giá trị: <strong id="totalValue">0&nbsp;₫</strong>
+            Tổng giá trị: <strong id="totalValue">0 VNĐ</strong>
           </span>
           <span class="stat-item">
             Tổng số lượng: <strong id="totalQuantity">0</strong>
@@ -147,6 +169,6 @@
       </footer>
     </div>
 
-    <script src="product-management.js"></script>
+    <script src="js.js"></script>
   </body>
 </html>
